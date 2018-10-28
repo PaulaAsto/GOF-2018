@@ -855,6 +855,41 @@ textarea.input {
 
 .footer-brand {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20px auto;
+  width: 250px;
+  height: 100px;
+  background: white;
+  border-radius: 75px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
+}
+
+.footer-brand:hover{
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+
+.footer-brand:hover:before, .footer-brand:hover:after{
+  display: block;
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  background: #FDA8CF;
+  border-radius: 75px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.footer-brand:hover:after{
+  background: #F3CE5E;
+  animation: 2s counterclockwise infinite;
 }
 
 .footer-brand .logo>img {
@@ -862,8 +897,13 @@ textarea.input {
 }
 
 .copyright {
-  height: 50px;
-  line-height: 50px;
+  opacity: 0.7;
+  color: #dd0a37;
+}
+
+.copyright:hover {
+  opacity: 1;
+  color: #0b0f28;
 }
 
 .contact-social {
@@ -880,13 +920,95 @@ textarea.input {
   background: #dd0a37;
   color: #fff;
   line-height: 30px;
-  margin-right: 15px;
+  margin-right: 25px;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
 
 .contact-social a:hover {
-  opacity: 0.8;
+  width: 40px;
+  height: 40px;
+  background: #0b0f28;
+  -webkit-transform: rotate(360deg) scale(2.5);
+  transform: rotate(360deg) scale(2.5);
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;    
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;    
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;    
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;    
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;    
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;    
+  }
 }
 
 /*=========================================================
